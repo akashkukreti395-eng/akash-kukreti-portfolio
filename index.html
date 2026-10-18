@@ -6,7 +6,8 @@
 <meta name="theme-color" content="#101110">
 <meta name="description" content="Akash Kukreti — student developer building web applications, simulations, and games. Explore projects and connect.">
 <title>Akash Kukreti — Developer Portfolio</title>
-<meta property="og:title" content="Akash Kukreti — Developer Portfolio">\n<meta property="og:description" content="Web apps, simulations, and game worlds by Akash Kukreti.">
+<meta property="og:title" content="Akash Kukreti — Developer Portfolio">
+<meta property="og:description" content="Web apps, simulations, and game worlds by Akash Kukreti.">
 <meta property="og:type" content="website">
 <style>
 :root{--bg:#101110;--paper:#191b19;--ink:#f4f3ef;--muted:#a5a79f;--line:#30332f;--accent:#ff914d;--soft:#20221f;--radius:22px;--max:1160px}
@@ -153,14 +154,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
       <div class="section-head reveal"><div><div class="kicker">03 / About me</div><h2>Curious by nature.<br>A builder by practice.</h2></div><p>A little context about the person making these projects — and the direction this collection is heading.</p></div>
       <div class="aboutgrid reveal">
         <aside class="about-card"><div class="about-monogram">AK.</div><h3>Akash Kukreti</h3><p>Student developer · Independent maker</p></aside>
-        <div class="about-copy"><p>I’m a BCA student interested in software, interactive systems, and turning ideas into things people can actually try. I use personal projects to learn by building — from web applications to creature simulations and game worlds.</p><p>This site is both a project directory and a public workbench: a place to share finished work, explain the process, and connect with people who have interesting problems to solve.</p>
-          <div class="timeline"><div class="timeline-item"><b>Web applications</b><p>Building and deploying independent web projects, learning how the pieces fit together.</p></div><div class="timeline-item"><b>Simulations & games</b><p>Exploring rules, behaviours, persistence, and systems that create emergent outcomes.</p></div><div class="timeline-item"><b>What's next</b><p>More experiments, better documentation, and collaborations that turn ideas into useful products.</p></div></div>
+        <div class="about-copy"><p>I’m a BCA student and independent developer focused on building practical web applications and interactive systems. I enjoy taking an idea from an early concept to a working project, learning through implementation, testing, and iteration.</p><p>My work spans deployed web experiences, C-based simulations, and game-world experiments in Godot. I’m continuing to strengthen my foundations in programming, product thinking, and software design while documenting what I build and learn along the way.</p>
+          <div class="timeline"><div class="timeline-item"><b>Build</b><p>Develop responsive interfaces and web application flows with attention to usability and clarity.</p></div><div class="timeline-item"><b>Explore systems</b><p>Experiment with creature behaviour, inheritance, survival mechanics, and persistent game worlds.</p></div><div class="timeline-item"><b>Improve</b><p>Test ideas, refine implementation, and keep learning through projects that can be demonstrated and discussed.</p></div></div>
         </div>
       </div>
 
           <div class="social-section">
             <h3>Find me around the web</h3>
-            <p>Choose a profile to explore more of my work. Add your real links in the configuration below.</p>
+            <p>Explore my profiles and follow along as I build new projects.</p>
             <div class="social-row" id="socialLinks" aria-label="Social profiles">
               <a class="social-link" data-social="github" href="#contact"><span class="social-icon">GH</span>GitHub <span>↗</span></a>
               <a class="social-link" data-social="instagram" href="#contact"><span class="social-icon">IG</span>Instagram <span>↗</span></a>
@@ -169,7 +170,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
           </div>
     </div>
   </section>
-  <section class="contact" id="contact"><div class="wrap"><div class="contactbox reveal"><div><div class="kicker">04 / Contact</div><h2>Have an idea?<br>Let’s build it.</h2><p>Need a website, a prototype, or help bringing an idea to life? I’m interested in thoughtful projects and collaborations.</p></div><a class="button" href="#contact" id="contactButton">Get in touch <span>↗</span></a></div></div></section>
+  <section class="contact" id="contact"><div class="wrap"><div class="contactbox reveal"><div><div class="kicker">04 / Contact</div><h2>Have an idea?<br>Let’s build it.</h2><p>Have a project idea or want to collaborate? Email me and tell me a little about what you’re building.</p></div><a class="button" href="https://mail.google.com/mail/?view=cm&fs=1&to=akashkukreti395%40gmail.com&su=Project%20inquiry" id="contactButton" target="_blank" rel="noopener noreferrer">Email me <span>↗</span></a></div></div></section>
 </main>
 <footer class="footer"><div class="wrap footrow"><a class="brand" href="#top" aria-label="Akash Kukreti home"><span class="brandmark">AK.</span><span>AKASH KUKRETI</span></a><span>Designed & built by Akash Kukreti · © <span id="year"></span></span><div class="footlinks"><a href="#projects">Projects</a><a href="#about">About</a><a href="https://github.com/akashkukreti395-eng" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -195,7 +196,7 @@ const SITE_CONFIG = {
   screenshots: {
     memoryVault: "",          // Optional relative image path, e.g. images/memoryvault.png
     evo: "",                  // Optional relative image path, e.g. images/evo.png
-    worldThatRemembers: ""    // Optional relative image path, e.g. images/world-that-remembers.png
+    worldThatRemembers: "",    // Optional relative image path, e.g. images/world-that-remembers.png
   }
 };
 </script>
@@ -217,8 +218,16 @@ function setConfiguredLink(link,url,message){const safe=safeExternalUrl(url);if(
 document.querySelectorAll('.project-destination').forEach(link=>{const key=link.dataset.urlKey;setConfiguredLink(link,SITE_CONFIG.projects[key],`Add the real ${link.dataset.project} URL in SITE_CONFIG near the bottom of this HTML file.`);});
 document.querySelectorAll('[data-social]').forEach(link=>{const key=link.dataset.social;const name=key.charAt(0).toUpperCase()+key.slice(1);setConfiguredLink(link,SITE_CONFIG.socials[key],`Add your real ${name} profile URL in SITE_CONFIG before publishing.`);});
 const contactButton=document.getElementById('contactButton');
-if(SITE_CONFIG.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(SITE_CONFIG.email)){contactButton.href='mailto:'+SITE_CONFIG.email+'?subject='+encodeURIComponent('Project inquiry');}
-else{contactButton.href='#contact';contactButton.addEventListener('click',e=>{e.preventDefault();showToast('Add your real email in SITE_CONFIG near the bottom of this HTML file before publishing.');});}
+if(SITE_CONFIG.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(SITE_CONFIG.email)){
+  contactButton.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(SITE_CONFIG.email)+'&su='+encodeURIComponent('Project inquiry');
+  contactButton.target='_blank';
+  contactButton.rel='noopener noreferrer';
+  contactButton.setAttribute('aria-label','Email Akash Kukreti using Gmail');
+}else{
+  contactButton.href='#contact';
+  contactButton.removeAttribute('target');
+  contactButton.addEventListener('click',e=>{e.preventDefault();showToast('Contact email is not configured yet.');});
+}
 
 /* Optional real screenshots: add local image paths above. The illustrated covers remain as fallbacks. */
 const screenshotMap={memoryVault:SITE_CONFIG.screenshots.memoryVault,evo:SITE_CONFIG.screenshots.evo,worldThatRemembers:SITE_CONFIG.screenshots.worldThatRemembers};
