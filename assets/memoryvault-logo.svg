@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+<defs><linearGradient id="neon" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00E5FF"/><stop offset=".52" stop-color="#398BFF"/><stop offset="1" stop-color="#A855F7"/></linearGradient></defs>
+<rect width="1200" height="300" rx="22" fill="#0B1020"/>
+<g transform="translate(30 12) scale(.54)"><image href="MemoryVault_App_Icon.svg" width="512" height="512"/></g>
+<text x="330" y="170" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="94" font-weight="750" letter-spacing="-4" fill="#F4F7FF">Memory<tspan fill="url(#neon)">Vault</tspan></text>
+<text x="338" y="220" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" letter-spacing="5" fill="#9AB2D8">STORE TODAY. UNLOCK TOMORROW.</text>
+</svg>

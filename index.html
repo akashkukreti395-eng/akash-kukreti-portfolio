@@ -75,6 +75,19 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 @media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 28px))}.nav{height:66px}.brand{font-size:.98rem}.navcta{display:none}.menu-toggle{display:block}.navlinks{display:none;position:absolute;left:14px;right:14px;top:65px;padding:14px;background:#191b19;border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 40px #0008;flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:12px 10px;border-radius:8px}.navlinks a:hover{background:#252821;color:var(--accent)}.hero{padding:52px 0 38px}.hero h1{font-size:clamp(3rem,15vw,5rem)}.hero-art{min-height:300px;padding:14px}.core{width:140px;height:140px}.core b{font-size:2.8rem}.fc1{top:18px;left:12px}.fc2{right:10px;top:120px}.fc3{bottom:16px;left:15px}.float-card{padding:9px 10px;font-size:.74rem}.float-icon{width:28px;height:28px}.section{padding:48px 0}.section-head{align-items:flex-start;flex-direction:column;gap:12px}.projects{grid-template-columns:1fr}.project-cover{height:190px}.project-tools{display:block}.filters{margin-bottom:12px}.search{width:100%}.band{padding:25px 20px;border-radius:22px}.skillgrid{gap:9px}.skill{padding:14px}.process{grid-template-columns:1fr;gap:18px}.contactbox{padding:28px 22px;gap:24px;align-items:flex-start;flex-direction:column}.contactbox h2{font-size:clamp(2.6rem,12vw,4rem)}.footrow{flex-wrap:wrap;gap:16px}.footlinks{width:100%;justify-content:flex-start}.about-card{padding:18px}.social-row{gap:8px}.social-link{padding:9px 11px;font-size:.8rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1!important;transform:none!important}}
 
+
+/* Brand refinement: MemoryVault electric blue/cyan/violet and OddlyGo orange. */
+.cover-memory{background:radial-gradient(ellipse at 72% 20%,#1c3d73 0,#111b35 45%,#0b1020 100%);border-bottom:1px solid #263e67}
+.memory-brand-panel{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:10px;color:#9ab2d8;font-size:.62rem;letter-spacing:.18em;text-align:center}
+.memory-brand-panel img{width:min(100%,270px);max-height:92px;object-fit:contain;filter:drop-shadow(0 10px 25px #00cfff22)}
+.memory-glow{position:absolute;width:220px;height:220px;border-radius:50%;background:#398bff1c;filter:blur(24px);right:-35px;bottom:-110px}
+.cover-oddly{background:radial-gradient(circle at 50% 40%,#2a1b12 0,#171417 55%,#0d0d10 100%);border-bottom:1px solid #56301c}
+.oddly-brand-panel{z-index:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;color:#fffdf8}
+.oddly-brand-panel img{width:74px;height:74px;object-fit:contain;filter:drop-shadow(0 8px 20px #ff6b0033)}
+.oddly-brand-panel strong{font-size:1.7rem;letter-spacing:-.06em}.oddly-brand-panel span{font-size:.72rem;color:#ffad72;letter-spacing:.12em;text-transform:uppercase}
+.oddly-orbit-glow{position:absolute;width:190px;height:90px;border:1px solid #ff6b0066;border-radius:50%;transform:rotate(-18deg);box-shadow:0 0 50px #ff6b0018}
+.project-link{transition:color .2s, gap .2s}.project-link:hover{color:var(--accent)}
+
 </style>
 </head>
 <body>
@@ -111,22 +124,18 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
       <div class="section-head reveal"><div><div class="kicker">01 / Selected work</div><h2>Things I’ve been building.</h2></div><p>A selection of web applications, simulations, and game projects. Each one represents an idea I’ve worked to bring to life.</p></div>
       <div class="project-tools reveal">
         <div class="filters" role="group" aria-label="Filter projects">
-          <button class="filter active" data-filter="all">All projects</button><button class="filter" data-filter="web">Web apps</button><button class="filter" data-filter="game">Games & worlds</button><button class="filter" data-filter="experiment">Experiments</button>
+          <button class="filter active" data-filter="all">All projects</button><button class="filter" data-filter="web">Web apps</button><button class="filter" data-filter="experiment">Experiments</button>
         </div>
         <label class="search"><input id="projectSearch" type="search" placeholder="Search projects…" aria-label="Search projects"></label>
       </div>
       <div class="projects" id="projectGrid">
         <article class="project reveal" data-category="web" data-search="memoryvault memory vault web app memories archive email verification">
-          <div class="project-cover cover-memory"><span class="project-visual-caption">01 / WEB</span><span class="project-visual-label">Memory archive concept</span><div class="window"><div class="windowbar"><i></i><i></i><i></i></div><div class="mock-lines"><span></span><span></span><span></span></div></div><div class="memory-mark">⌑</div></div>
-          <div class="project-body"><div class="project-meta"><span>WEB APPLICATION</span><span class="status">Live project</span></div><h3>MemoryVault</h3><p>A web application built around preserving meaningful memories. Explore the live product and how its core experience works.</p><div class="tags"><span class="tag">Web</span><span class="tag">Authentication</span><span class="tag">Product</span></div><a class="project-link project-destination" href="#contact" data-url-key="memoryVault" data-project="MemoryVault">Project details <span>↗</span></a></div>
+          <div class="project-cover cover-memory"><span class="project-visual-caption">01 / WEB APP</span><span class="project-visual-label">Keep today. Revisit tomorrow.</span><div class="memory-brand-panel"><img src="assets/memoryvault-logo.svg" alt="MemoryVault logo" loading="lazy"><span>STORE TODAY. UNLOCK TOMORROW.</span></div><div class="memory-glow"></div></div>
+          <div class="project-body"><div class="project-meta"><span>WEB APPLICATION</span><span class="status">Live project</span></div><h3>MemoryVault</h3><p>A multimedia memory archive designed to preserve personal moments. MemoryVault brings together accounts, shared memories, and photo, video, and audio attachments in one place.</p><div class="tags"><span class="tag">Web app</span><span class="tag">PostgreSQL</span><span class="tag">Media storage</span></div><a class="project-link project-destination" href="#contact" data-url-key="memoryVault" data-project="MemoryVault">Explore MemoryVault <span>↗</span></a></div>
         </article>
         <article class="project reveal" data-category="web" data-search="oddlygo oddly go playful internet playground weird websites mini games interactive experiments">
-          <div class="project-cover cover-oddly"><span class="project-visual-caption">02 / WEB EXPERIENCE</span><span class="project-visual-label">Bored? Go Oddly.</span><div class="oddly-art"><span class="oddly-orbit"></span><span class="oddly-shape shape-one">?</span><span class="oddly-shape shape-two">✳</span><span class="oddly-shape shape-three">↗</span></div></div>
-          <div class="project-body"><div class="project-meta"><span>INTERACTIVE WEB PROJECT</span><span class="status">Live project</span></div><h3>OddlyGo</h3><p>A playful internet playground for discovering unusual corners of the web, mini-games, and interactive experiments.</p><div class="tags"><span class="tag">Web</span><span class="tag">JavaScript</span><span class="tag">Experiments</span></div><a class="project-link project-destination" href="#contact" data-url-key="oddlyGo" data-project="OddlyGo">Visit live site <span>↗</span></a></div>
-        </article>
-        <article class="project reveal" data-category="game" data-search="the world that remembers godot game ecosystem creature inspection persistent world drought chronicle">
-          <div class="project-cover cover-world"><span class="project-visual-caption">03 / GODOT</span><span class="project-visual-label">A persistent living world</span><div class="sun"></div><div class="mountains"></div></div>
-          <div class="project-body"><div class="project-meta"><span>GODOT GAME</span><span class="status build">In development</span></div><h3>The World That Remembers</h3><p>An evolving world where creatures survive, environments change, and the world’s history becomes part of the experience.</p><div class="tags"><span class="tag">Godot</span><span class="tag">Simulation</span><span class="tag">World systems</span></div><a class="project-link project-destination" href="#contact" data-url-key="worldThatRemembers" data-project="The World That Remembers">Project details <span>↗</span></a></div>
+          <div class="project-cover cover-oddly"><span class="project-visual-caption">02 / INTERACTIVE WEB</span><span class="project-visual-label">Explore · Play · Discover</span><div class="oddly-brand-panel"><img src="assets/oddlygo-favicon.svg" alt="OddlyGo planet logo" loading="lazy"><strong>OddlyGo</strong><span>Bored? Go Oddly.</span></div><div class="oddly-orbit-glow"></div></div>
+          <div class="project-body"><div class="project-meta"><span>INTERACTIVE WEB PROJECT</span><span class="status">Live project</span></div><h3>OddlyGo</h3><p>A curiosity-driven internet playground packed with original mini-games, daily puzzles, saved and recent experiences, and a growing collection of unusual web discoveries.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Mini-games</span></div><a class="project-link project-destination" href="#contact" data-url-key="oddlyGo" data-project="OddlyGo">Play on OddlyGo <span>↗</span></a></div>
         </article>
         <article class="project reveal" data-category="experiment" data-search="next project upcoming experiments ideas prototypes">
           <div class="project-cover cover-next"><span class="project-visual-caption">04 / IN PROGRESS</span><span class="project-visual-label">New work in the making</span><div style="font-size:4.5rem;font-weight:300;letter-spacing:-.1em;color:#7d6c60">+</div></div>
@@ -139,7 +148,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 
   <section class="section" id="approach">
     <div class="wrap">
-      <div class="band reveal"><div><div class="kicker">02 / How I build</div><h2>Curiosity first.<br>Useful by design.</h2><p>I like projects that teach me something new — whether that means building a useful web product, modelling a system, or creating a world with its own rules.</p><a class="button" href="#contact">Build something together <span>↗</span></a></div><div><div class="kicker">CURRENT TOOLBOX</div><div class="skillgrid">
+      <div class="band reveal"><div><div class="kicker">02 / How I build</div><h2>Curiosity first.<br>Useful by design.</h2><p>I like projects that teach me something new — from useful web products to playful interactive experiences that reward curiosity.</p><a class="button" href="#contact">Build something together <span>↗</span></a></div><div><div class="kicker">CURRENT TOOLBOX</div><div class="skillgrid">
         <div class="skill"><div class="symbol">⌘</div><h3>Web development</h3><p>Interfaces, responsive layouts, product flows</p></div>
         <div class="skill"><div class="symbol">⌬</div><h3>Programming</h3><p>Logic, algorithms, and problem solving</p></div>
         <div class="skill"><div class="symbol">◈</div><h3>Game systems</h3><p>Worlds, behaviours, interactive mechanics</p></div>
@@ -190,13 +199,11 @@ const SITE_CONFIG = {
   },
   projects: {
     memoryVault: "https://memoryvault-g9t0.onrender.com", // MemoryVault live URL
-    oddlyGo: "https://oddlygo.pages.dev/", // OddlyGo live URL
-    worldThatRemembers: ""    // The World That Remembers repository or game page
+    oddlyGo: "https://oddlygo.pages.dev/" // OddlyGo live URL
   },
   screenshots: {
     memoryVault: "",          // Optional relative image path, e.g. images/memoryvault.png
-    oddlyGo: "",              // Optional relative image path, e.g. images/oddlygo.png
-    worldThatRemembers: "",    // Optional relative image path, e.g. images/world-that-remembers.png
+    oddlyGo: ""               // Optional relative image path, e.g. images/oddlygo.png
   }
 };
 </script>
@@ -230,7 +237,7 @@ if(SITE_CONFIG.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(SITE_CONFIG.email)){
 }
 
 /* Optional real screenshots: add local image paths above. The illustrated covers remain as fallbacks. */
-const screenshotMap={memoryVault:SITE_CONFIG.screenshots.memoryVault,oddlyGo:SITE_CONFIG.screenshots.oddlyGo,worldThatRemembers:SITE_CONFIG.screenshots.worldThatRemembers};
+const screenshotMap={memoryVault:SITE_CONFIG.screenshots.memoryVault,oddlyGo:SITE_CONFIG.screenshots.oddlyGo};
 /* Optional profile photo: save your image beside this HTML in an images folder,
    then set profileImage to a relative path such as images/akash.jpg. */
 const profileBox=document.querySelector('.about-monogram');
